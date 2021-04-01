@@ -1,0 +1,1190 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#"
+     xml:base="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#estcontenuedans"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#estDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#estDans">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#estassociea -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#estassociea">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#estcontenuedans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#estcontenuedans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#Studying -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#Studying">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#diner -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#diner">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#dormir -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#dormir">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#etat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#etat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heureest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heureest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heurereveil -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heurereveil">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#minest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#minest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#nom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceMangerDiner -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceMangerDiner">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preference_dejeune -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preference_dejeune">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureAllumerLumiere -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureAllumerLumiere">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureEteindreLumiere -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureEteindreLumiere">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureFermetureVolet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureFermetureVolet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureOuvertureVolet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#preferenceheureOuvertureVolet">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#prendre_petitdejeuné -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#prendre_petitdejeuné">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#prenom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#prenom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#prepare_petitdejeune -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#prepare_petitdejeune">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#regarder_TV -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#regarder_TV">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#rentreToilette -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#rentreToilette">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#secest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#secest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#sortir -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#sortir">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chambre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chambre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#climatiseur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#climatiseur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#cuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#cuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#frigo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#frigo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#temps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#robinet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#robinet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salle_de_bain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salle_de_bain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#temps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#temps"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#volet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#volet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chasse_d&apos;eau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chasse_d&apos;eau">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#IR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#IR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tv"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>IR</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>alarme</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarmereveil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarmereveil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>alarmereveil</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarmereveil2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarmereveil2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>alarmereveil2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alumerlumiere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alumerlumiere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>alumerlumiere</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire"/>
+        <nom>armoire1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire"/>
+        <nom>armoire2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape"/>
+        <nom>canape1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape"/>
+        <nom>canape2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape_convertible -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape_convertible">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape"/>
+        <nom>canape_convertible</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise"/>
+        <nom>chaise1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise"/>
+        <nom>chaise2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chambre1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chambre1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chambre"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire1"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_chambre"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe1"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lit"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_chambre"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_chambre"/>
+        <nom>chambre1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_chambre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_chambre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#climatiseur"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>clim_chambre</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_cuisine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_cuisine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#climatiseur"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>clim_cuisine</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_salon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_salon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#climatiseur"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>clim_salon</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_sb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_sb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#climatiseur"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>clim_sb</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contact_sensor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contact_sensor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_maison"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>contact_sensor1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contact_sensor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contact_sensor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_sb"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>contact_sensor2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contact_sensor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#contact_sensor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#cuisine1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#cuisine1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#cuisine"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise1"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise2"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_cuisine"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#frigo"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe2"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_cuisine"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#robinet1"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine1"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_cuisine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#dejeuneR2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#dejeuneR2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>dejeuneR2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#diner1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#diner1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>diner1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#diner2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#diner2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>diner2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>distance1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chaise2"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>distance2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chasse_d&apos;eau1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>distance3</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#distance4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#robinet1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>distance4</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#fermeturevolet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#fermeturevolet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>fermeturevolet</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#force_sensor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#force_sensor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>force_sensor1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#force_sensor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#force_sensor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape2"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>force_sensor2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#force_sensor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#force_sensor3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lit"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>force_sensor3</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#frigo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#frigo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#frigo"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>frigo</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#heure"/>
+        <heureest rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</heureest>
+        <minest rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</minest>
+        <nom>heure</nom>
+        <secest rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</secest>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>lampe1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>lampe2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>lampe4</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>lampe5</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lit"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>lit</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#ouverturevolet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#ouverturevolet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>ouverturevolet</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#overturevoletsalon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#overturevoletsalon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#alarme"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>overturevoletsalon</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>photocell1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape_convertible"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>photocell2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#frigo"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>photocell3</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>photocell4</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#photocell5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire2"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>photocell5</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_chambre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_chambre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>porte_chambre</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_cuisine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_cuisine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>porte_cuisine</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_maison -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_maison">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>porte_maison</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_sb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_sb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>porte_sb</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#resident1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#resident1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <estDans rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chambre1"/>
+        <estDans rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#cuisine1"/>
+        <estDans rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salle_de_bain"/>
+        <estDans rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon1"/>
+        <diner rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</diner>
+        <dormir rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dormir>
+        <heurereveil rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</heurereveil>
+        <preferenceMangerDiner rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</preferenceMangerDiner>
+        <preferenceTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</preferenceTemperature>
+        <preferenceheureAllumerLumiere rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</preferenceheureAllumerLumiere>
+        <preferenceheureEteindreLumiere rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</preferenceheureEteindreLumiere>
+        <preferenceheureFermetureVolet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</preferenceheureFermetureVolet>
+        <preferenceheureOuvertureVolet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</preferenceheureOuvertureVolet>
+        <prendre_petitdejeuné rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</prendre_petitdejeuné>
+        <prenom>resident1</prenom>
+        <prepare_petitdejeune rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</prepare_petitdejeune>
+        <regarder_TV rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</regarder_TV>
+        <rentreToilette rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</rentreToilette>
+        <sortir rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</sortir>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#resident2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#resident2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#personne"/>
+        <estDans rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon1"/>
+        <Studying rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</Studying>
+        <diner rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</diner>
+        <dormir rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dormir>
+        <heurereveil rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</heurereveil>
+        <preferenceMangerDiner rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</preferenceMangerDiner>
+        <preference_dejeune rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</preference_dejeune>
+        <preferenceheureOuvertureVolet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</preferenceheureOuvertureVolet>
+        <prenom>resident2</prenom>
+        <regarder_TV rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</regarder_TV>
+        <rentreToilette rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</rentreToilette>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#robinet1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#robinet1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#robinet"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>robinet1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salle_de_bain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salle_de_bain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salle_de_bain"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#armoire2"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_sb"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe5"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#porte_sb"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine1"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chasse_d&apos;eau1"/>
+        <nom>salle_de_bain</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape1"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape2"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#canape_convertible"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#clim_salon"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#lampe4"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tv"/>
+        <contient rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_salon"/>
+        <nom>salon1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#sonar_distance1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#sonar_distance1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#cuisine1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>sonar_distance1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#sonar_distance2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#sonar_distance2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <estassociea rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#salon1"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>sonar_distance2</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#temperature1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#temperature1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#capteur"/>
+        <nom>temperature1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tiroireCuisine"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>tiroireCuisine1</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#tv"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>tv</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_chambre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_chambre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#volet"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>v_chambre</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_cuisine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_cuisine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#volet"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>v_cuisine</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_salon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#v_salon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#volet"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>v_salon</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chasse_d&apos;eau1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chasse_d&apos;eau1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#chasse_d&apos;eau"/>
+        <etat rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</etat>
+        <nom>chasse_d&apos;eau1</nom>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

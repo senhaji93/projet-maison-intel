@@ -1,0 +1,203 @@
+@prefix ns: <http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@include <OWL>.
+
+
+#pieces:
+[rule15: (?piece rdf:type ns:chambre) -> (?piece rdf:type ns:Pieces)]
+[rule16: (?piece rdf:type ns:cuisine) -> (?piece rdf:type ns:Pieces)]
+[rule17: (?piece rdf:type ns:salle_de_bain) -> (?piece rdf:type ns:Pieces)]
+[rule18: (?piece rdf:type ns:salon) -> (?piece rdf:type ns:Pieces)]
+
+
+#equipements:
+[rule1: (?equip rdf:type ns:armoire)-> (?equip rdf:type ns:equipement)]
+[rule2: (?equip rdf:type ns:canape)-> (?equip rdf:type ns:equipement)]
+[rule3: (?equip rdf:type ns:chaise)-> (?equip rdf:type ns:equipement)]
+[rule4: (?equip rdf:type ns:chasse_d'eau)-> (?equip rdf:type ns:equipement)]
+[rule5: (?equip rdf:type ns:climatiseur)-> (?equip rdf:type ns:equipement)]
+[rule6: (?equip rdf:type ns:frigo) -> (?equip rdf:type ns:equipement)]
+[rule7: (?equip rdf:type ns:lampe)-> (?equip rdf:type ns:equipement)]
+[rule8: (?equip rdf:type ns:lit)-> (?equip rdf:type ns:equipement)]
+[rule9: (?equip rdf:type ns:porte)-> (?equip rdf:type ns:equipement)]
+[rule10: (?equip rdf:type ns:robinet)-> (?equip rdf:type ns:equipement)]
+[rule11: (?equip rdf:type ns:tiroireCuisine)-> (?equip rdf:type ns:equipement)]
+[rule12: (?equip rdf:type ns:capteur)-> (?equip rdf:type ns:equipement)]
+[rule13: (?equip rdf:type ns:tv)-> (?equip rdf:type ns:equipement)]
+[rule14: (?equip rdf:type ns:volet)-> (?equip rdf:type ns:equipement)]
+#pref 7h reveil R1 + ouvr volet cuisine +chambre
+[rule21: (?resident rdf:type ns:personne)(?resident ns:prenom "resident1")(?heurereveil ns:heurereveil ?er)equal(?er,7)
+         (?heure ns:heureest ?h)equal(?h,7)
+         (?heure ns:minest ?m)equal(?m,0)
+         (?heure ns:secest ?s)equal(?s,0)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "alarmereveil")
+         -> (?alarme ns:etat ns:true)]
+ 
+          
+[rule20: (?resident rdf:type ns:personne)(?resident ns:prenom "resident1")(?preferenceheureOuvertureVolet ns:preferenceheureOuvertureVolet ?er)equal(?er,7)
+         (?heure ns:heureest ?h)equal(?h,7)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "ouverturevolet")
+            (?voletchambre rdf:type ns:volet) (?vloetchambre ns:nom "v_chambre")
+           (?voletcuisine rdf:type ns:volet) (?vloetcuisine ns:nom "v_cuisine")
+         -> (?alarme ns:etat ns:true)(?vloetchambre  ns:etat ns:true) (?vloetcuisine  ns:etat ns:true)]        
+         
+#pref 8h reveil R2         
+[rule22: (?resident rdf:type ns:personne)(?resident ns:prenom "resident2")(?heurereveil ns:heurereveil ?er)equal(?er,8)
+         (?heure ns:heureest ?h)equal(?h,8)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "alarmereveil2")   
+         -> (?alarme ns:etat ns:true)]
+         
+[rule23: (?resident rdf:type ns:personne)(?resident ns:prenom "resident2")(?preferenceheureOuvertureVolet ns:preferenceheureOuvertureVolet ?er)equal(?er,8)
+         (?heure ns:heureest ?h)equal(?h,8)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "overturevoletsalon")
+         (?voletsalon rdf:type ns:volet) (?voletsalon ns:nom "v_salon")
+         -> (?alarme ns:etat ns:true)(?voletsalon  ns:etat ns:true) ]
+         
+
+
+[rule44:(?resident rdf:type ns:personne)(?resident ns:prenom "resident1")
+(?porte rdf:type ns:porte)(?porte ns:nom "porte_maison")(?contact_sensor1 rdf:type ns:capteur)
+(?contact_sensor1 ns:nom "contact_sensor1")
+(?contact_sensor1 ns:estassociea ?porte)(?contact_sensor1 ns:etat ns:true)
+->(?resident ns:sortir ns:true)]
+
+
+[rule45:(?resident rdf:type ns:personne)(?resident ns:prenom "resident1")(?resident ns:estDans ?sallebain)
+(?sallebain rdf:type ns:salle_de_bain)(?sallebain ns:contient ?porte)(?sallebain ns:contient ?chasse_d'eau)(?porte rdf:type ns:porte)
+(?porte ns:nom "porte_sb")(?contact_sensor2 ns:estassociea ?porte)(?chasse_d'eau rdf:type ns:chasse_d'eau)
+(?chasse_d'eau ns:nom "chasse_d'eau1")
+(?distance3 ns:estassociea ?chasse_d'eau)(?distance3 ns:etat ns:true)
+(?armoire rdf:type ns:armoire) (?armoire ns:nom "armoire2") (?armoire ns:etat ns:false)
+(?resident2 rdf:type ns:personne)(?resident2 ns:prenom "resident2")(?lampe rdf:type ns:lampe) (?lampe ns:nom "lampe5") 
+->(?lampe ns:etat ns:true)(?resident ns:rentreToilette ns:true)(?resident2 ns:rentreToilette ns:false)]
+
+  
+     
+
+[rule66:(?resident rdf:type ns:personne)(?resident ns:prenom "resident2")
+(?sallebain rdf:type ns:salle_de_bain)(?sallebain ns:contient ?porte)(?sallebain ns:contient ?chasse_d'eau)(?porte rdf:type ns:porte)
+(?porte ns:nom "porte_sb")(?contact_sensor2 ns:estassociea ?porte)(?chasse_d'eau rdf:type ns:chasse_d'eau)
+(?chasse_d'eau ns:nom "chasse_d'eau1")
+(?distance3 ns:estassociea ?chasse_d'eau)(?distance3 ns:etat ns:true)
+(?armoire rdf:type ns:armoire) (?armoire ns:nom "armoire2") (?armoire ns:etat ns:true)(?lampe rdf:type ns:lampe) (?lampe ns:nom "lampe5") 
+->(?lampe ns:etat ns:true)(?resident ns:rentreToilette ns:true)
+(?resident1 rdf:type ns:personne)(?resident1 ns:prenom "resident1")(?resident1 ns:rentreToilette false)]
+
+
+
+
+[rule43:(?resident rdf:type ns:personne)(?resident ns:prenom "resident1")(?resident ns:estDans ?chambre)
+(?chambre ns:contient ?lit) (?lit rdf:type ns:lit)(?lit ns:nom "lit")(?foce_sensor3 rdf:type ns:capteur)
+(?force_sensor3 ns:nom "force_sensor3")(?force_sensor3 ns:estassociea ?lit)(?force_sensor3 ns:etat ns:true)
+(?heure ns:heureest ?h) lessThan(?h,8) ->(?resident ns:dormir ns:true)]
+ 
+
+[rule46:(?resident rdf:type ns:personne)(?resident ns:prenom "resident2")(?resident ns:estDans ?salon1)
+(?salon1 ns:contient ?canape_convertible) (?photocell2 rdf:type ns:capteur)
+(?photocell2 ns:nom "photocell2")(?photocell2 ns:estassociea ?canape_convertible)(?photocell2 ns:etat ns:true)
+(?heure ns:heureest ?h) lessThan(?h,9) ->(?resident ns:dormir ns:true)]
+ 
+
+ [rule47:(?resident rdf:type ns:personne)(?resident ns:prenom "resident1")
+  (?sonar_distance1 ns:nom "sonar_distance1")(?sonar_distance1 ns:estassociea ?cuisine1)(?sonar_distance1 ns:etat ns:true)
+  (?distance2 ns:nom "distance2")(?distance2 ns:estassociea ?chaise)(?distance2 ns:etat ns:true)
+ (?chaise rdf:type ns:chaise) (?chaise ns:nom "chaise2")
+ (?heure ns:heureest ?h) lessThan(?h,9)
+ ->(?resident ns:prendre_petitdejeuné ns:true)]
+ 
+  [rule100:(?resident rdf:type ns:personne)(?resident ns:prenom "resident1")
+ (?sonar_distance1 ns:nom "sonar_distance1")(?sonar_distance1 ns:estassociea ?cuisine1)(?sonar_distance1 ns:etat ns:true)
+  (?photocell3 ns:nom "photocell3")(?photocell3 ns:estassociea ?frigo)(?photocell3 ns:etat ns:true)
+ (?frigo rdf:type ns:frigo) (?frigo ns:nom "frigo")
+ (?heure ns:heureest ?h) lessThan(?h,9)
+ ->(?resident ns:prepare_petitdejeune ns:true)]
+
+ 
+  
+ [rule49:(?resident rdf:type ns:personne)(?resident ns:prenom "resident2")(?heure ns:heureest ?h)
+      greaterThan(?h, 12) lessThan(?h,14)
+ (?sonar_distance2 ns:nom "sonar_distance2")(?sonar_distance1 ns:estassociea ?salon1)(?sonar_distance2 ns:etat ns:true)
+ (?force_sensor1 ns:nom "force_sensor1")(?force_sensor1 ns:estassociea ?canape1)(?force_sensor1 ns:etat ns:true)
+ ->(?resident ns:Studying ns:true)]
+ 
+[rule50: (?resident rdf:type ns:personne)(?resident ns:prenom "resident2")(?preference_dejeune ns:preference_dejeune ?dejeune)equal(?dejeune,13)
+         (?heure ns:heureest ?h)equal(?h,13)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "dejeuneR2")
+         -> (?alarme ns:etat ns:true) ]
+ 
+ [rule51:(?resident rdf:type ns:personne)(?resident ns:prenom "resident1")
+  (?tv rdf:type ns:tv)(?ir ns:estassociea ?tv)(?ir rdf:type ns:capteur)(?ir ns:nom "IR")(?ir ns:etat ns:true)
+   (?force_sensor1 ns:nom "force_sensor1")(?force_sensor1 ns:estassociea ?canape1)(?force_sensor1 ns:etat ns:true)
+ ->(?resident ns:regarder_TV ns:true)]
+ 
+  [rule52:(?resident rdf:type ns:personne)(?resident ns:prenom "resident2")
+  (?tv rdf:type ns:tv)(?ir ns:estassociea ?tv)(?ir rdf:type ns:capteur)(?ir ns:nom "IR")(?ir ns:etat ns:true)
+   (?force_sensor2 ns:nom "force_sensor2")(?force_sensor2 ns:estassociea ?canape2)(?force_sensor2 ns:etat ns:true)
+ ->(?resident ns:regarder_TV ns:true)]
+ 
+[rule53: (?resident rdf:type ns:personne)(?resident ns:prenom "resident2")(?preferenceMangerDiner ns:preferenceMangerDiner ?diner)equal(?diner,20)
+         (?heure ns:heureest ?h)equal(?h,20)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "diner2")
+         -> (?alarme ns:etat ns:true) ]
+         
+[rule54: (?resident rdf:type ns:personne)(?resident ns:prenom "resident1")(?preferenceMangerDiner ns:preferenceMangerDiner ?diner)equal(?diner,20)
+         (?heure ns:heureest ?h)equal(?h,20)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "diner1")
+         -> (?alarme ns:etat ns:true) ]
+         
+[rule55: (?preferenceheureFermetureVolet ns:preferenceheureFermetureVolet ?er)equal(?er,20)
+         (?heure ns:heureest ?h)equal(?h,20)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "fermeturevolet")
+         -> (?alarme ns:etat ns:true)]
+         
+[rule56: (?heure ns:heureest ?h)greaterThan(?h,19)(?volet rdf:type ns:volet)
+        ->  (?volet  ns:etat ns:false)]
+        
+
+            
+[rule58: (?resident rdf:type ns:personne)(?resident ns:prenom "resident1")
+         (?heure ns:heureest ?h)greaterThan(?h,6)lessThan(?h,20)
+          (?voletchambre rdf:type ns:volet) (?vloetchambre ns:nom "v_chambre")
+           (?voletcuisine rdf:type ns:volet) (?vloetcuisine ns:nom "v_cuisine")
+         -> (?vloetchambre  ns:etat ns:true) (?vloetcuisine  ns:etat ns:true)]        
+         
+  
+  [rule59: (?resident rdf:type ns:personne)(?resident ns:prenom "resident2")
+        (?heure ns:heureest ?h)greaterThan(?h,7)lessThan(?h,20)        
+   (?voletsalon rdf:type ns:volet) (?vloetsalon ns:nom "v_salon")
+  ->(?voletsalon  ns:etat ns:true) ]
+  
+  
+
+#règle preference d'heure allumage de la lumiere
+[rule55: (?preferenceheureAllumerLumiere ns:preferenceheureAllumerLumiere ?er)equal(?er,20)
+         (?heure ns:heureest ?h)equal(?h,20)
+         (?heure ns:minest ?m)equal(?m,00)
+         (?heure ns:secest ?s)equal(?s,00)
+         (?alarme rdf:type ns:alarme) (?alarme ns:nom "alumerlumiere")
+         -> (?alarme ns:etat ns:true)]
+                
+[rule57: (?heure ns:heureest ?h)greaterThan(?h,19) lessThan(?h,23)(?lampe rdf:type ns:lampe)
+      -> (?lampe  ns:etat ns:true)]
+
+#preferencetemperature       
+
+
+[rule57: (?temperature ns:temperature ?tmp)notEqual(?temp,22)(?climatiseur rdf:type ns:climatiseur)
+      -> (?climatiseur ns:etat ns:true)]
+

@@ -1,0 +1,17 @@
+PREFIX ns: <http://www.semanticweb.org/pc/ontologies/2021/0/untitled-ontology-10#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT  ?nom ?rentretoilette  ?piece ?porte 
+WHERE {
+
+         ?nom rdf:type ns:personne.
+         ?nom ns:prenom "resident1".
+         ?piece rdf:type ns:salle_de_bain .
+         ?piece ns:nom "salle_de_bain" .
+         ?nom ns:estDans ?piece.
+         ?porte rdf:type ns:porte .
+         ?porte ns:nom "porte_sb" .
+         ?piece ns:contient ?porte .
+         ?nom ns:rentreToilette ?rentretoilette
+        
+}
